@@ -1,22 +1,42 @@
 <?php
-    /* Problema  5.Desarrollar  un  programa  que  permita  cargar  un  vector
-      y  luego ordenarlo de manera ascendente o descendente o ambos. */
-      class LlenarArray5{
-        public $dato;
-        public $posicion;
-        function __construct($dato, $posicion){
-          $this->dato = $dato;
-          $this->posicion = $posicion;
-        }
-        function llenarArray(){
-          $array [$this->posicion]->dato = $this->dato;
-          var_dump($array);
-        }
+  /* Problema  5.Desarrollar  un  programa  que  permita  cargar  un  vector
+    y  luego ordenarlo de manera ascendente o descendente o ambos. */
+  class Ordenar{
+    public $dato1;
+    public $dato2;
+    public $dato3;
+    public $dato4;
+    function __construct($dato1, $dato2, $dato3, $dato4){
+      $this->dato1 = $dato1;
+      $this->dato2 = $dato2;
+      $this->dato3 = $dato3;
+      $this->dato4 = $dato4;
     }
-    if(isset($_POST['enviar5'])){
-        $dato5 = $_POST['dato5'];
-        $posicion5 = $_POST['posicion5'];
+    function ordenAscendente(){
+      print("<center><b>Ordenamos de manera Ascendente incluso si es texto recuerde que si es mayúscula es superior a una minúscula<br></center>");
+      $numero = array($this->dato1, $this->dato2, $this->dato3, $this->dato4);
+      sort($numero);
+      foreach ($numero as $orden){
+        print("<center>".$orden."</center><br>");
+      }
     }
-    $array5 = new LlenarArray5($dato5, $posicion5);
-    $array5->llenarArray5();
+    function ordenDescendente(){
+      print("<center><b>Ordenamos de manera Descendente  incluso si es texto recuerde que si es mayúscula es superior a una minúscula<br></center>");
+      $numero = array($this->dato1, $this->dato2, $this->dato3, $this->dato4);
+      rsort($numero);
+      foreach ($numero as $orden){
+        print("<center>".$orden."</center><br>");
+      }
+    }
+  }
+  if(isset($_POST['enviar5'])){
+    $dato1 = $_POST['dato1'];
+    $dato2 = $_POST['dato2'];
+    $dato3 = $_POST['dato3'];
+    $dato4 = $_POST['dato4'];
+  }
+  $ordenar = new Ordenar($dato1, $dato2, $dato3, $dato4);
+  //$ordenar = new Ordenar(1, 4, 5, 2);
+  $ordenar->ordenAscendente();
+  $ordenar->ordenDescendente();
 ?>

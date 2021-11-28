@@ -16,7 +16,8 @@
         var_dump($array);
         if($this->posicion == $eliminar){
           print("<br>Se borro el dato en la posicion: ".$this->eliminar."<br>");
-          unset($this->dato[$this->posicion]);
+          unset($array[$this->posicion]);
+          //unset($this->dato[$this->posicion]);
         }
       }
   }

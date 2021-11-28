@@ -49,7 +49,7 @@
             }
         }
         $boby = new Perro('Boby', 'Pastor Aleman', 5, true, true,
-         'http://programacion_3.com/images/boby.jpg');
+         'http://karmaland.cochasoft.com/images/boby.jpg');
         print "<b>Hola soy un perro me llamo: ".$boby->nombre."<br> tengo: ".$boby->edad.
         "<br>soy raza: ".$boby->raza."<br>soy: ".$boby->sexo."<br>también estoy: ".$boby->adiestrado.
         "<br>me veo así:<br>".'<img src="'.$boby->foto.'">'."</b>";
